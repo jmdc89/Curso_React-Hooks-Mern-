@@ -8,7 +8,7 @@ const PrimeraApp = ( { saludo, subtitulo} ) => {
         <>
         <h1> { saludo }</h1>
         {/* {<pre> { JSON.stringify( saludo, null, 3) }</pre>} */}
-        <p>Mi primera aplicación</p>
+        <p>Mi primeraa... aplicación</p>
         </>
     );
 }
