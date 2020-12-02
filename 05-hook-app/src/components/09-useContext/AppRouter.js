@@ -4,11 +4,20 @@ import {
     Switch,
     Route,
   } from "react-router-dom";
+import { AboutScreen } from './AboutScreen';
+import { HomeScreen } from './HomeScreen';
+import { LoginScreen } from './LoginScreen';
 
 export const AppRouter = () => {
     return (
-        <div>
-            
-        </div>
+        <Router>
+            <div>
+                <Switch>
+                    <Route exact path="/about" component={AboutScreen} />
+                    <Route exact path="/login" component={LoginScreen} />
+                    <Route exact path="/" component={HomeScreen} />
+                </Switch>
+            </div>
+        </Router>
     )
 }
