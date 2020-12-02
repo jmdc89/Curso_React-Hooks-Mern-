@@ -13,13 +13,14 @@ import ReactDOM from 'react-dom';
 // import { CounterWithCustomHook } from './components/01-useState/CounterWithCustomHook';
 // import { SimpleForm } from './components/02-useEffect/SimpleForm';
 // import { HookApp } from './HookApp';
-import './components/08-useReducer/intro-reducer';
-import { TodoApp } from './components/08-useReducer/TodoApp';
+// import './components/08-useReducer/intro-reducer';
+// import { TodoApp } from './components/08-useReducer/TodoApp';
+import { MainApp } from './components/09-useContext/MainApp';
 
 
 
 ReactDOM.render(
-    <TodoApp />,
+    <MainApp />,
   document.getElementById('root')
 );
 
