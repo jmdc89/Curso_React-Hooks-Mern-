@@ -21,4 +21,4 @@ const firebaseConfig = {
         db,
         googleAuthProvider,
         firebase
-    };
+    }
