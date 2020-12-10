@@ -64,3 +64,15 @@ export const login = (uid, displayName) => ({
         displayName
     }
 })
+
+export const startLogout = () => {
+    return async( dispatch ) => {
+        await firebase.auth().signOut();
+
+        dispatch()
+    }
+}
+
+export const logout = () => ({
+    type: types.logout
+})
