@@ -1,4 +1,9 @@
-import { db } from "../firebase/firebase-config";
+// import Swal from 'sweetalert2';
+
+import { db } from '../firebase/firebase-config';
+import { types } from '../types/types';
+// import { loadNotes } from '../helpers/loadNotes';
+// import { fileUpload } from '../helpers/fileUpload';
 
 export const startNewNote = () => {
     return async( dispatch, getState ) => {
@@ -12,6 +17,15 @@ export const startNewNote = () => {
 
         const doc = await db.collection(`${uid}/journal/notes`).add( newNote );
 
-        console.log(doc);
+        dispatch( activeNote( doc.id, newNote ) );
+        // dispatch( addNewNote( doc.id, newNote ) );
     }
 }
+
+export const activeNote = ( id, note ) => ({
+    type: types.notesActive,
+    payload: {
+        id,
+        ...note
+    }
+});
