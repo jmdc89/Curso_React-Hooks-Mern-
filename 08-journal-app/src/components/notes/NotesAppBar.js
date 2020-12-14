@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { startSaveNote} from '../../actions/notes';
+import { startSaveNote, startUploading} from '../../actions/notes';
 
 export const NotesAppBar = () => {
 

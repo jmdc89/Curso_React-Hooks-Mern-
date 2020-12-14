@@ -31,9 +31,9 @@ export const NoteScreen = () => {
     }, [formValues, dispatch])
 
 
-    // const handleDelete = () => {
-    //     dispatch( startDeleting( id ) );
-    // }
+    const handleDelete = () => {
+        dispatch( startDeleting( id ) );
+    }
 
 
     return (
@@ -79,7 +79,7 @@ export const NoteScreen = () => {
 
             <button 
                 className="btn btn-danger"
-                // onClick={ handleDelete }
+                onClick={ handleDelete }
             >
                 Delete
             </button>
