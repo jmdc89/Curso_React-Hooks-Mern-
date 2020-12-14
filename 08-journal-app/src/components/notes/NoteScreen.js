@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { NotesAppBar } from './NotesAppBar';
 import { useForm } from '../../hooks/useForm';
-import { activeNote} from '../../actions/notes';
+import { activeNote, startDeleting} from '../../actions/notes';
 
 export const NoteScreen = () => {
 
