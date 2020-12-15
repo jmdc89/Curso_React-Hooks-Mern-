@@ -1,12 +1,13 @@
 import React from 'react'
 import { LoginScreen } from '../components/auth/LoginScreen';
-import { CalendarApp } from '../CalendarApp';
+
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Redirect
   } from "react-router-dom";
+import { CalendarScreen } from '../components/calendar/CalendarScreen';
 
 export const AppRouter = () => {
     return (
@@ -23,7 +24,7 @@ export const AppRouter = () => {
                     <Route 
                         exact
                         path="/"
-                        component={ CalendarApp }
+                        component={ CalendarScreen }
                     />
 
                     <Redirect to="/"  />
