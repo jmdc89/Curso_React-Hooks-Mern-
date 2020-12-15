@@ -4,6 +4,6 @@ import { CalendarApp } from './CalendarApp';
 
 
 ReactDOM.render(
-    <CalendarApp />
+    <CalendarApp />,
   document.getElementById('root')
 );
