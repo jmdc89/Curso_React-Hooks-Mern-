@@ -16,7 +16,7 @@ const events = [{
 
 export const CalendarScreen = () => {
     return (
-        <div>
+        <div className="calendar-screen">
             <NavBar />
 
             <Calendar
