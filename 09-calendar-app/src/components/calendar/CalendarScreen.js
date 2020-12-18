@@ -12,9 +12,9 @@ import { uiOpenModal } from '../../actions/ui';
 
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import 'moment/locale/es';
-// import { eventSetActive, eventClearActiveEvent } from '../../actions/events';
-// import { AddNewFab } from '../ui/AddNewFab';
-// import { DeleteEventFab } from '../ui/DeleteEventFab';
+import { eventSetActive, eventClearActiveEvent } from '../../actions/events';
+import { AddNewFab } from '../ui/AddNewFab';
+import { DeleteEventFab } from '../ui/DeleteEventFab';
 
 moment.locale('es');
 
@@ -34,8 +34,8 @@ const events = [{
 
 export const CalendarScreen = () => {
 
-    // const dispatch = useDispatch();
-    // const { events, activeEvent } = useSelector( state => state.calendar );
+    const dispatch = useDispatch();
+    const { events, activeEvent } = useSelector( state => state.calendar );
 
     const [lastView, setLastView] = useState( localStorage.getItem('lastView') || 'month' );
 
