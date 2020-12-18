@@ -6,6 +6,7 @@ import 'moment/locale/es';
 import { NavBar } from '../ui/NavBar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import { messages } from '../../helpers/calendar-messages-es';
+import { CalendarEvent } from './CalendarEvent';
 
 moment.locale('es');
 
@@ -16,7 +17,11 @@ const events = [{
     start: moment().toDate(),
     end: moment().add( 2, 'hour' ).toDate(),
     bgcolor: '#fafafa',
-    notes: 'Comprar el pastel'
+    notes: 'Comprar el pastel',
+    user: {
+        _id: '123',
+        name: 'Fernando'
+    }
 }]
 
 export const CalendarScreen = () => {
@@ -49,6 +54,9 @@ export const CalendarScreen = () => {
                 endAccessor="end"
                 messages={messages}
                 eventPropGetter={ eventStyleGetter }
+                components={{
+                    event: CalendarEvent
+                }}
             />
 
         </div>
