@@ -54,6 +54,9 @@ export const CalendarScreen = () => {
                 endAccessor="end"
                 messages={messages}
                 eventPropGetter={ eventStyleGetter }
+                onDoubleClickEvent={ onDoubleClick }
+                onSelectEvent={ onSelectEvent }
+                onView={ onViewChange }
                 components={{
                     event: CalendarEvent
                 }}
