@@ -6,7 +6,7 @@ import moment from 'moment';
 import { NavBar } from '../ui/NavBar';
 import { messages } from '../../helpers/calendar-messages-es';
 import { CalendarEvent } from './CalendarEvent';
-// import { CalendarModal } from './CalendarModal';
+import { CalendarModal } from './CalendarModal';
 
 // import { uiOpenModal } from '../../actions/ui';
 
@@ -91,6 +91,8 @@ export const CalendarScreen = () => {
                     event: CalendarEvent
                 }}
             />
+
+            <CalendarModal />
 
         </div>
     )
