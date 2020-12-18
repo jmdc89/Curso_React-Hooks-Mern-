@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import moment from 'moment';
 
 import { NavBar } from '../ui/NavBar';
@@ -8,7 +8,7 @@ import { messages } from '../../helpers/calendar-messages-es';
 import { CalendarEvent } from './CalendarEvent';
 import { CalendarModal } from './CalendarModal';
 
-// import { uiOpenModal } from '../../actions/ui';
+import { uiOpenModal } from '../../actions/ui';
 
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import 'moment/locale/es';
@@ -42,7 +42,7 @@ export const CalendarScreen = () => {
 
     const onDoubleClick = (e) => {
         console.log(e);
-        // dispatch( uiOpenModal() );
+        dispatch( uiOpenModal() );
     }
 
     const onSelectEvent = (e) => {
