@@ -24,11 +24,14 @@ const crearUsuario = (req, res = response ) => {
 
         await usuario.save();
 
-            res.status(201).json({
-                ok: true,
-                uid: usuario.id,
-                name: usuario.name
-            });
+        //Generar JWT
+        
+
+        res.status(201).json({
+            ok: true,
+            uid: usuario.id,
+            name: usuario.name
+        });
 
     } catch (error) {
         console.log(error)
