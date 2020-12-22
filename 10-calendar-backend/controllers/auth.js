@@ -6,13 +6,23 @@ const crearUsuario = (req, res = response ) => {
     // const { name, email, password } = req.body;
 
     try {
-        const usuario = new Usuario( req.body );
+        let usuario = await Usuario.findOne({ email });
+
+        if ( usuario ) {
+            return res.status(400).json({
+                ok: false,
+                msg: 'El usuario ya existe'
+            });
+        }
+
+        usuario = new Usuario( req.body );
 
         await usuario.save();
 
             res.status(201).json({
                 ok: true,
-                msg: 'registro'
+                uid: usuario.id,
+                name: usuario.name
             });
 
     } catch (error) {
