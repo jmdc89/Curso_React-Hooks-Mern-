@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { LoginScreen } from '../components/auth/LoginScreen';
 
 import {
@@ -8,8 +8,18 @@ import {
     Redirect
   } from "react-router-dom";
 import { CalendarScreen } from '../components/calendar/CalendarScreen';
+import { useDispatch } from 'react-redux';
 
 export const AppRouter = () => {
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        
+        dispatch( startChecking )
+
+    }, [])
+
     return (
 
         <Router>
