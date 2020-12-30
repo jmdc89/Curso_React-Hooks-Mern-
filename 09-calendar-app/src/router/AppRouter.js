@@ -8,17 +8,22 @@ import {
     Redirect
   } from "react-router-dom";
 import { CalendarScreen } from '../components/calendar/CalendarScreen';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 export const AppRouter = () => {
 
     const dispatch = useDispatch();
+    const { checking } = useSelector( state => state.auth);
 
     useEffect(() => {
-        
+
         dispatch( startChecking )
 
-    }, [])
+    }, [dispatch])
+
+    if ( checking ) {
+        return (<h5>Espere...</h5>);
+    }
 
     return (
 
